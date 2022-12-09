@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/sgsa-gr7-leaderboard/static/css/main.afb2e24d.css",
+    "main.js": "/sgsa-gr7-leaderboard/static/js/main.41271f5d.js",
+    "index.html": "/sgsa-gr7-leaderboard/index.html",
+    "main.afb2e24d.css.map": "/sgsa-gr7-leaderboard/static/css/main.afb2e24d.css.map",
+    "main.41271f5d.js.map": "/sgsa-gr7-leaderboard/static/js/main.41271f5d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.afb2e24d.css",
+    "static/js/main.41271f5d.js"
+  ]
+}
