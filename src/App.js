@@ -10,6 +10,7 @@ import "./App.css";
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState([]);
+  const [filteredData, setFilteredData] = useState([]);
   const [search, setSearch] = useState("");
 
   const fetchData = useCallback(async () => {
@@ -40,8 +41,14 @@ function App() {
   }, [fetchData]);
 
   const handleSearch = (e) => {
+    setIsLoading(true);
     setSearch(e.target.value);
     // filter data
+    const filtered = data.filter((item) => {
+      return item.name.toLowerCase().includes(e.target.value.toLowerCase());
+    });
+    setFilteredData(filtered);
+    setIsLoading(false);
   };
 
   return (
@@ -58,7 +65,7 @@ function App() {
           ? Array(5)
               .fill(0)
               .map((_, i) => <RowShimmer key={i} />)
-          : data.map(({ name, score }, i) => (
+          : (search ? filteredData : data).map(({ name, score }, i) => (
               <Row key={i} imgSrc={`${name}.png`} name={name} score={score} />
             ))}
       </div>
