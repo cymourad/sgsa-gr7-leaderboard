@@ -52,7 +52,7 @@ function App() {
   };
 
   return (
-    <div className="flex flex-col space-y-2 items-center">
+    <div className="flex flex-col space-y-4 items-center">
       <h1>SGSA Gr 7 Leader Board</h1>
       <input
         type="text"
