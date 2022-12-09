@@ -53,7 +53,7 @@ function App() {
         value={search}
         onChange={handleSearch}
       />
-      <div className="flex flex-col space-y-2">
+      <div className="flex flex-col space-y-4">
         {isLoading
           ? Array(5)
               .fill(0)
@@ -79,8 +79,8 @@ const RowShimmer = () => (
 const Row = ({ imgSrc, name, score }) => (
   <div className="flex space-x-4 items-center">
     <img className="rounded-full w-15 h-15" src={imgSrc} alt={name} />
-    <div className="flex space-x-4">
-      <h3 className="font-semibold">{name}</h3>
+    <div className="flex space-x-4 items-center">
+      <h3 className="font-semibold w-30">{name}</h3>
       <p className="text-sm text-gray-500">{score}</p>
     </div>
   </div>
